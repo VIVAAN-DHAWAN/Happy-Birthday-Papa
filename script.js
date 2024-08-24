@@ -1,4 +1,3 @@
-// Function to create confetti
 function createConfetti() {
     const colors = ['#ff0', '#f0f', '#0ff', '#f00', '#0f0'];
     const numConfetti = 100;
@@ -14,7 +13,6 @@ function createConfetti() {
     }
 }
 
-// Create confetti on page load
 window.onload = function() {
     createConfetti();
 };

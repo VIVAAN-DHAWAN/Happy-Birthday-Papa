@@ -1,18 +1,26 @@
-function createConfetti() {
-    const colors = ['#ff0', '#f0f', '#0ff', '#f00', '#0f0'];
-    const numConfetti = 100;
+// Slideshow Functionality
+let slideIndex = 0;
+showSlides();
 
-    for (let i = 0; i < numConfetti; i++) {
-        const confetti = document.createElement('div');
-        confetti.classList.add('confetti');
-        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.animationDuration = Math.random() * 5 + 5 + 's';
-        confetti.style.opacity = Math.random();
-        document.body.appendChild(confetti);
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
-window.onload = function() {
-    createConfetti();
-};
+// Play/Pause Music
+document.getElementById('play-music').addEventListener('click', function() {
+    const audio = document.getElementById('background-music');
+    if (audio.paused) {
+        audio.play();
+        this.textContent = 'Pause Music';
+    } else {
+        audio.pause();
+        this.textContent = 'Play Music';
+    }
+});

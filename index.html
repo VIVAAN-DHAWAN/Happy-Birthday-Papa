@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Happy Birthday, Dad!</h1>
-        <!-- Slideshow Container -->
-        <div class="slideshow-container">
-            <!-- Slides -->
-            <div class="mySlides fade">
-                <img src="IMG_6467.jpeg" alt="Birthday Image 1" class="slide-img">
-            </div>
-            <div class="mySlides fade">
-                <img src="IMG_6529.jpeg" alt="Birthday Image 2" class="slide-img">
-            </div>
-            <!-- Add more slides as needed -->
-            <div class="mySlides fade">
-                <img src="fullsizerender.jpeg" alt="Additional Image" class="slide-img">
-            </div>
-        </div>
+        
+        <!-- Image Links for Lightbox -->
+        <a href="IMG_6467.jpeg" data-lightbox="gallery" data-title="Birthday Image 1">
+            <img src="IMG_6467.jpeg" alt="Birthday Image 1" class="thumbnail-img">
+        </a>
+        <a href="IMG_6529.jpeg" data-lightbox="gallery" data-title="Birthday Image 2">
+            <img src="IMG_6529.jpeg" alt="Birthday Image 2" class="thumbnail-img">
+        </a>
+        <!-- Add more images similarly -->
+        <a href="fullsizerender.jpeg" data-lightbox="gallery" data-title="Additional Image">
+            <img src="fullsizerender.jpeg" alt="Additional Image" class="thumbnail-img">
+        </a>
 
         <!-- Play Button for Music -->
         <button id="play-music">Play Music</button>
     </div>
     <audio id="background-music" src="song.mp3" loop></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

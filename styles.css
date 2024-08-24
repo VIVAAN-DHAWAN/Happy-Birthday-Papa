@@ -23,20 +23,18 @@ h1 {
     margin-bottom: 20px;
 }
 
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-.slide-img {
+.thumbnail-img {
     width: 100%;
+    max-width: 300px; /* Adjust size as needed */
     height: auto;
     border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail-img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 button {

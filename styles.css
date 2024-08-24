@@ -5,16 +5,15 @@
     box-sizing: border-box;
 }
 
-/* Background and general styles */
 body {
     background-color: #f0f0f0;
     color: #333;
     font-family: Arial, sans-serif;
     text-align: center;
+    position: relative; /* Ensure confetti is positioned relative to body */
 }
 
 .container {
-    position: relative;
     padding: 20px;
 }
 
@@ -49,7 +48,6 @@ h1 {
     pointer-events: none;
 }
 
-/* Additional styles for confetti */
 .confetti:nth-child(1) { background-color: #ff0; }
 .confetti:nth-child(2) { background-color: #f0f; }
 .confetti:nth-child(3) { background-color: #0ff; }
